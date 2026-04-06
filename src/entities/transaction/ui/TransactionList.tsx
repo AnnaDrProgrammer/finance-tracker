@@ -1,7 +1,6 @@
-
 import { TransactionItem } from './TransactionItem';
 import { EmptyState } from './EmptyState';
-import type { Transaction } from '../../../shared/lib/types/transaction';
+import type { Transaction } from '../../../shared/types/transaction';
 
 interface TransactionListProps {
   transactions: Transaction[];

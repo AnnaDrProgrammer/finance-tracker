@@ -1,8 +1,8 @@
 import { useState } from 'react';
-import { Alert } from '../../../shared/lib/ui/alert';
-import { Input } from '../../../shared/lib/ui/input';
-import { Label } from '../../../shared/lib/ui/label';
-import { Button } from '../../../shared/lib/ui/button';
+import { Alert } from '../../../shared/ui/alert';
+import { Input } from '../../../shared/ui/input';
+import { Label } from '../../../shared/ui/label';
+import { Button } from '../../../shared/ui/button';
 // import { Button, Input, Label, Alert } from '../../../shared/lib/ui'
 
 interface AddTransactionFormProps {

@@ -1,4 +1,4 @@
-import { Input } from '../../../shared/lib/ui/input';
+import { Input } from '../../../shared/ui/input';
 
 interface FilterInputProps {
   filter: string;

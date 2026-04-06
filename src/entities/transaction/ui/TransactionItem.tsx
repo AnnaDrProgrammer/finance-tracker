@@ -1,5 +1,5 @@
-import type { Transaction } from '../../../shared/lib/types/transaction';
-import { Button } from '../../../shared/lib/ui/button';
+import type { Transaction } from '../../../shared/types/transaction';
+import { Button } from '../../../shared/ui/button';
 
 interface TransactionItemProps {
   transaction: Transaction;
