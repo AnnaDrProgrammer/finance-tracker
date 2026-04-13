@@ -122,15 +122,8 @@ export function usePiggyBank() {
       ),
     );
 
-    // Добавляем транзакцию вывода
-    const newTransaction: PiggyBankTransaction = {
-      id: Date.now().toString(),
-      amount: goal.amount,
-      date: new Date().toISOString(),
-      goalId,
-      type: 'withdraw',
-    };
-    setTransactions((prev) => [...prev, newTransaction]);
+    // НЕ ДОБАВЛЯЕМ ТРАНЗАКЦИЮ - деньги просто разблокируются
+    // Баланс автоматически увеличится, так как уменьшится totalInPiggyBank
 
     return goal.amount;
   };

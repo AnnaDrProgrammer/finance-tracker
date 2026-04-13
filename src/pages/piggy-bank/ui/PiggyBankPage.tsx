@@ -125,20 +125,14 @@ export const PiggyBankPage = ({
     }
   };
 
-  const confirmWithdraw = async () => {
+  const confirmWithdraw = () => {
     if (goalToWithdraw) {
       try {
         const isDatePassed = new Date() >= new Date(goalToWithdraw.targetDate);
         const amount = withdrawFromPiggyBank(goalToWithdraw.id, !isDatePassed);
 
-        // Обновляем баланс пользователя
-        const newTransaction: Transaction = {
-          id: Date.now().toString(),
-          title: `Вывод из копилки: ${goalToWithdraw.amount} ₽`,
-          amount: amount,
-          type: 'income',
-        };
-        setTransactions((prev) => [...prev, newTransaction]);
+        // УБИРАЕМ создание транзакции - не нужно!
+        // Баланс обновится автоматически через хук
 
         setSuccess(`${amount} ₽ переведены на баланс!`);
         setTimeout(() => setSuccess(''), 3000);
